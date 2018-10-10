@@ -1,5 +1,5 @@
 'use strict';
-let money,time
+let money,time;
 function start(){
     money = +prompt("Ваш бюджет на месяц?");
     time = prompt("Введите дату в формате YYYY-MM-DD");
@@ -53,10 +53,10 @@ for (let i = 0; i < 2; i++) {
 //             i++;
 // }   while (i<2); 
 function detectDayBudget(budget){
-    appData.detectDayBudget = (money/30).toFixed{};
+    appData.detectDayBudget = (money/30).toFixed();
     alert("Бюджет на один день  " +appData.money)
 }
-detectDayBudget(appData.money){
+detectDayBudget(appData.money);
 function detectLevel(moneyDay){
     if(moneyDay < 100){
         console.log('минимальный уровень достатка');
@@ -72,8 +72,8 @@ detectLevel(appData.moneyDay)
 
 function chooseOptExpenses(nonBindingExpenses) {
     for( let i = 0; i < 3; i++) {
-        let answer3 + prompt('статья необязательных расходов', '');
-        optionalExpenses[1] = answer3;        
+        let answer3 = + prompt('статья необязательных расходов', '');
+        appData.optionalExpenses[i] = answer3;        
     }
     console.log(optionalExpenses);
 }
