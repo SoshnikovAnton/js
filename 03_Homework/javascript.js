@@ -60,11 +60,11 @@ detectDayBudget(appData.money);
 function detectLevel(moneyDay){
     if(moneyDay < 100){
         console.log('минимальный уровень достатка');
-    } esle if (moneyDay > 100 && moneyDay <2000){
+    } else if (moneyDay > 100 && moneyDay <2000){
         console.log('средний уровень достатка');
-    } esle if (moneyDay > 2000) {
+    } else if (moneyDay > 2000) {
         console.log('высокий уровень достатка');
-    } esle {
+    } else {
         console.log('произошла ошибка');
     }
 }
