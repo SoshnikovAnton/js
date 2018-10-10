@@ -33,28 +33,11 @@ for (let i = 0; i < 2; i++) {
     } else { i--;
 
     }    
-};
-//  while (i < 2) {
-//    let answer = prompt("Введите обязательную статью расходов в этом месяце", ""),
-//         answer1 = +prompt("Во сколько обойдется?", "");
-            // if ( (typeof(answer))=== 'string' && (typeof(answer)) != null && (typeof(answer1)) != null
-            //     && answer != '' && answer1 != '' && answer.length<50){
-//         console.log("done");
-//         i++;
-            // }
-//  };
-// let i = 0;
-// do {    let answer = prompt("Введите обязательную статью расходов в этом месяце", ""),
-//             answer1 = +prompt("Во сколько обойдется?", ""); 
-//             console.log("done");
-                // if ( (typeof(answer))=== 'string' && (typeof(answer)) != null && (typeof(answer1)) != null
-                //     && answer != '' && answer1 != '' && answer.length<50)
-//             appData.expenses[answer] = answer1;
-//             i++;
-// }   while (i<2); 
+}
+
 function detectDayBudget(budget){
     appData.detectDayBudget = (money/30).toFixed();
-    alert("Бюджет на один день  " +appData.money)
+    alert("Бюджет на один день  " +appData.money);
 }
 detectDayBudget(appData.money);
 function detectLevel(moneyDay){
@@ -68,7 +51,7 @@ function detectLevel(moneyDay){
         console.log('произошла ошибка');
     }
 }
-detectLevel(appData.moneyDay)
+detectLevel(appData.moneyDay);
 
 function chooseOptExpenses(nonBindingExpenses) {
     for( let i = 0; i < 3; i++) {
