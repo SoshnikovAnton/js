@@ -58,7 +58,7 @@ function chooseOptExpenses(nonBindingExpenses) {
         let answer3 = + prompt('статья необязательных расходов', '');
         appData.optionalExpenses[i] = answer3;        
     }
-    console.log(optionalExpenses);
+    console.log(appData.optionalExpenses);
 }
 chooseOptExpenses();
 
