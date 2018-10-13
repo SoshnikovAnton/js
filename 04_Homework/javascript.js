@@ -40,7 +40,7 @@ let appData = {
         appData.detectDayBudget = (money / 30).toFixed();
         alert("Бюджет на один день  " + appData.money);
     },
-    detectLevel: function () {
+    detectLevel: function (moneyDay) {
         if (moneyDay < 100) {
             console.log('минимальный уровень достатка');
         } else if (moneyDay > 100 && moneyDay < 2000) {
@@ -57,21 +57,31 @@ let appData = {
             appData.optionalExpenses[i] = answer3;
         }
     },
-    chooseIncome: function () {
-        let items = prompt('Что принесет дополнительный доход?(Перечеслите через запятую)', '');
-        appData.income = items.split(', ');
-         while (typeof (items) != 'string' || items == "" || items == null) {
-             items = prompt('Что принесет дополнительный доход?', '');
-         }
-         appData.chooseIncome.forEach(function (item, i) {
-            console.log("Способы доп. заработка:" + (i + 1) + ". " + item);
+    chooseIncome: function() {            
+        let items = prompt('Что принесёт дополнительный доход? (Перечислите через запятую)', '');            
 
-         });
+        while(typeof(items) != 'string' || items == null || items == '' | items == 'underfind') {
+            alert('Введите строку');
+            items = prompt('Что принесёт дополнительный доход? (Перечислите через запятую)', '');            
+        }
+        
+        appData.income = items.split(', ');
+        appData.income.push(prompt('Может что-то ещё?'));
+        appData.income.sort();
+        
+        document.write("Способы доп. заработка: <br>");
+        appData.income.forEach(function(item, i) {
+            document.write( (i+1) + '. ' + item.charAt(0).toUpperCase() + 
+                            item.slice(1) + '<br>');
+        });        
     }
 };
 
 
 
-for (let key in appData) {
-    console.log(appData[key])
+console.log('Наша программа включает в себя данные: ');
+for( let key in appData) {
+    if (typeof(appData[key]) != 'function') {
+        console.log( key + ':' + appData[key]);
+    }
 };
